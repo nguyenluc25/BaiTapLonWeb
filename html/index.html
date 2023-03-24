@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container_header">
+            <nav class="nav_header">
+              <div class="logo">
+               <a href="">
+                   <img src="../image/logo.png" alt="">
+               </a>
+              </div>
+              <ul class="ul_header" >
+               <li class="li_menu"><a href="">Trang chủ</a></li>
+               <li class="li_menu"><a href="">Thông tin</a></li>
+               <li class="li_menu product"><a href="">Sản phẩm</a>
+               <ul class="nav_product">
+                 <li class="nav_menu_product"><a href="">Socola Thanh</a></li>
+                 <li class="nav_menu_product"><a href="">Bánh Ngọt</a></li>
+                 <li class="nav_menu_product"><a href="">Kẹo Socola</a></li>
+               </ul></li>
+               <li class="li_menu"><a href="">Trang</a></li>
+              </ul>
+   
+              <div class="container_input_header">
+                <input type="text" name="" id="" placeholder="Tìm kiếm tại đây" class="input_header">
+                <button class="button_header"><i class='bx bx-search-alt-2'></i></button>
+   
+              </div>
+            </nav>
+            
+           </div>
+    </header>
+    <section id="Slider">
+        <div class="slider-container">
+            <img src="../image/silde1.jpg" alt="">
+            <img src="../image/silde2.jpg" alt="">
+            <img src="../image/silde3.jpg" alt="">
+        </div>
+        <div class="dot-container">
+            <img class="dot active" src="../image/dot1.jpg" alt="">
+            <img class="dot" src="../image/dot2.jpg" alt="">
+            <img class="dot" src="../image/dot3.jpg" alt="">
+        </div>
+    </section>
+    
+</body>
+<script>
+    const imgPosition = document.querySelectorAll(".slider-container img")
+    const imgContainer = document.querySelector(".slider-container")
+    const dotItem = document.querySelectorAll(".dot")
+
+    imgPosition.forEach(function(image, index){
+        image.style.left = index*100 + "%"
+        dotItem[index].addEventListener("click",function(){
+            slider(index)
+        })
+    })
+
+    let imgNumber = imgPosition.length
+    let index = 0
+    function imgSlide(){
+        index++;
+        if(index>=imgNumber){
+            index = 0;
+        }
+        slider(index)
+    }
+
+    function slider(index){
+        imgContainer.style.left = "-" + index*100+ "%"
+        const dotActive = document.querySelector(".active")
+        dotActive.classList.remove("active")
+        dotItem[index].classList.add("active")
+    }
+
+    setInterval(imgSlide, 5000)
+</script>
+</html>
