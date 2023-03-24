@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -36,52 +37,77 @@
    
               </div>
             </nav>
-            
            </div>
     </header>
+
+    <!-- -----------------------------------------------Slider---------------------------------------------------- -->
+
     <section id="Slider">
-        <div class="slider-container">
-            <img src="../image/silde1.jpg" alt="">
-            <img src="../image/silde2.jpg" alt="">
-            <img src="../image/silde3.jpg" alt="">
-        </div>
-        <div class="dot-container">
-            <img class="dot active" src="../image/dot1.jpg" alt="">
-            <img class="dot" src="../image/dot2.jpg" alt="">
-            <img class="dot" src="../image/dot3.jpg" alt="">
+        <div class="slideshow-container">
+            <div class="slide fade">
+              <img src="/image/silde1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="/image/silde2.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="/image/silde3.jpg" alt="Slide 1">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
     </section>
-    
+
+<!-- -----------------------------------------------about---------------------------------------------------- -->
+<section id="about" class="about">
+    <div class="about-container">
+        <h2>About us</h2>
+        <br>
+        <p>
+            Duis lacinia mauris ut sem suscipit cursus. Praesent tincidunt dolor eget pretium porttitor. Nam malesuada ipsum quis ligula porttitor placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi maximus auctor commodo.
+        </p>
+        <br>
+        <p>
+            Praesent rutrum purus ligula, fringilla dignissim eros pellentesque sit amet. Integer vel odio rhoncus, dapibus felis ut, venenatis arcu. Donec dapibus varius ligula et malesuada.
+        </p>
+    </div>
+    <div class="about-image">
+        <img src="/image/about-image.jpg" alt="">
+    </div>
+</section>
+<!-- -----------------------------------------------product---------------------------------------------------- -->
+
 </body>
 <script>
-    const imgPosition = document.querySelectorAll(".slider-container img")
-    const imgContainer = document.querySelector(".slider-container")
-    const dotItem = document.querySelectorAll(".dot")
+var slideIndex = 0;
+showSlides();
 
-    imgPosition.forEach(function(image, index){
-        image.style.left = index*100 + "%"
-        dotItem[index].addEventListener("click",function(){
-            slider(index)
-        })
-    })
-
-    let imgNumber = imgPosition.length
-    let index = 0
-    function imgSlide(){
-        index++;
-        if(index>=imgNumber){
-            index = 0;
-        }
-        slider(index)
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
     }
-
-    function slider(index){
-        imgContainer.style.left = "-" + index*100+ "%"
-        const dotActive = document.querySelector(".active")
-        dotActive.classList.remove("active")
-        dotItem[index].classList.add("active")
+    slideIndex++;
+    if (slideIndex > slides.length) {
+    slideIndex = 1;
     }
-
-    setInterval(imgSlide, 5000)
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000); // Thời gian chuyển đổi slide là 5 giây
+}
+function plusSlides(n) {
+    var slides = document.getElementsByClassName("slide");
+    slideIndex += n;
+    if (slideIndex > slides.length) {
+    slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+    slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}
 </script>
 </html>

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+>>>>>>> a164784eda7e4eeb01da515bd74ece2d3fb08bbc
 
 * {
     margin: 0;
@@ -178,6 +182,7 @@ display: inline-block;
     padding-top: 5px;
     color: white;
 }
+<<<<<<< HEAD
 ::placeholder{
     color: white;   
 }
@@ -190,35 +195,76 @@ display: inline-block;
     position: relative;
     padding-top: 56.25%;
     transition: all 0.3s ease;
+=======
+
+/* -------------------------------------------Slider------------------------------------ */
+
+.slideshow-container {
+position: relative; 
+}
+  
+.slide {
+display: none;
+/* position: absolute;
+top: 0;
+left: 0; */
+width: 100%;
+height: auto;
+overflow: hidden;
 }
 
-.slider-container img {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+.slide:first-child {
+display: block;
+>>>>>>> a164784eda7e4eeb01da515bd74ece2d3fb08bbc
 }
 
-.dot-container {
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
     position: absolute;
+    top: 500px;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+/* -------------------------------------------About------------------------------------ */
+.about{
     display: flex;
-    width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.dot-container .dot{
-    width: 127px;
-    height: 150px;
-    margin-right: 20px;
-    padding: 24px;
-    opacity: 0.6;
-    cursor: pointer;
+.about-container {
+    width: 700px;
+    position: relative;
+    left: 300px;
 }
-.dot.active, .dot:hover {
-    opacity: 1;
-}
-
-
+/* -------------------------------------------Product------------------------------------ */
