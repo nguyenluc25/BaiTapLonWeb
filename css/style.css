@@ -148,16 +148,14 @@ padding-top: 18px;
 /* -------------------------------------------Slider------------------------------------ */
 
 .slideshow-container {
-    position: relative;
-    width: 100%;
-    transition: 0.3s ease;
+position: relative; 
 }
   
 .slide {
 display: none;
-position: absolute;
+/* position: absolute;
 top: 0;
-left: 0;
+left: 0; */
 width: 100%;
 height: auto;
 overflow: hidden;
@@ -205,5 +203,15 @@ display: block;
   }
 
 /* -------------------------------------------About------------------------------------ */
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.about-container {
+    width: 700px;
+    position: relative;
+    left: 300px;
+}
 /* -------------------------------------------Product------------------------------------ */
