@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,8 @@ header{
     width: 100%;
     height: 72.2px;
     background-color:rgb(129, 93, 10) ;
+    position: fixed;
+    z-index: 1;
 }
 .container_header{
     width: 1330px;
@@ -58,17 +61,16 @@ header{
     content: "";
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: 2px;
+    background-color: aliceblue;
     border-radius: 4px;
-    
     top: 35px;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
   }
-
-  .ul_header>li>a:hover::before {
+.ul_header>li>a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
@@ -118,8 +120,16 @@ header{
 width: 370px;
 height: 72.2px;
 display: inline-block;
-padding-top: 18px;
+
 }
+.input_data_header{
+    width: 200px;
+    height: 72.2px;
+    /* background-color: antiquewhite; */
+    position: relative;
+  
+}
+
 .button_header{
     background-color: transparent;
     border: none;
@@ -128,21 +138,49 @@ padding-top: 18px;
 }
 .input_header{
     width: 180px;
-    height: 35px;
-    border-radius: 4px;
-    border-color: rgb(142, 106, 8);
-    margin-bottom: 10px;
+    height: 30px;
+    margin-top: 18px;
     float: left;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid rgb(237, 164, 55);
 }
-.input_header:focus{
+.input_header:focus {
     background-color: rgb(255, 255, 255);
+    background-color: transparent;
+    outline: none;
+}
+::placeholder{
+    font-size: 10px;
+}
+.input_data_header>.underline{
+    position: absolute;
+    bottom: 23.6px;
+    height: 1.2px;
+    width: 180px;
+    
+}
+.input_data_header>.underline::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgb(207, 209, 208);
+    transform: scaleX(0);
+    transition: transform .4s ease;
+}
+.input_data_header>.input_header:focus ~ .underline::before{
+    transform: scaleX(1);
 }
 .button_header>i{
     font-size: 25px;
     padding-top: 5px;
     color: white;
 }
-
+::placeholder{
+    color: white;   
+}
 #Slider {
     overflow: hidden;
 }
@@ -151,7 +189,7 @@ padding-top: 18px;
     display: block;
     position: relative;
     padding-top: 56.25%;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .slider-container img {
