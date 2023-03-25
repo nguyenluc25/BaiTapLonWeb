@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
->>>>>>> a164784eda7e4eeb01da515bd74ece2d3fb08bbc
+
 
 * {
     margin: 0;
@@ -195,7 +192,7 @@ display: inline-block;
     position: relative;
     padding-top: 56.25%;
     transition: all 0.3s ease;
-=======
+}
 
 /* -------------------------------------------Slider------------------------------------ */
 
@@ -215,7 +212,7 @@ overflow: hidden;
 
 .slide:first-child {
 display: block;
->>>>>>> a164784eda7e4eeb01da515bd74ece2d3fb08bbc
+
 }
 
 /* Next & previous buttons */
