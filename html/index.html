@@ -6,57 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"/>
+
 </head>
 <body>
     <header>
-        <div class="container_header">
-            <nav class="nav_header">
-              <div class="logo">
-               <a href="">
-                   <img src="../image/logo.png" alt="">
-               </a>
-              </div>
-              <ul class="ul_header" >
-               <li class="li_menu"><a href="">Trang chủ</a></li>
-               <li class="li_menu"><a href="">Thông tin</a></li>
-               <li class="li_menu product"><a href="">Sản phẩm</a>
-               <ul class="nav_product">
-                 <li class="nav_menu_product"><a href="">Socola Thanh</a></li>
-                 <li class="nav_menu_product"><a href="">Bánh Ngọt</a></li>
-                 <li class="nav_menu_product"><a href="">Kẹo Socola</a></li>
-               </ul></li>
-               <li class="li_menu"><a href="">Trang</a></li>
-              </ul>
-              <div class="container_input_header">
-                <div class="input_data_header">
-                <input type="text" name="text" id="text" class="input_header" placeholder="Tìm kiếm ...">
-                <div class="underline"></div>
-            </div>
-                <button class="button_header"><i class='bx bx-search-alt-2'></i></button>
-   
-              </div>
-            </nav>
-           </div>
-    </header>
-
-    <!-- -----------------------------------------------Slider---------------------------------------------------- -->
-
-    <section id="Slider">
-        <div class="slideshow-container">
-            <div class="slide fade">
-              <img src="/image/silde1.jpg" alt="Slide 1">
-            </div>
-            <div class="slide fade">
-                <img src="/image/silde2.jpg" alt="Slide 1">
-            </div>
-            <div class="slide fade">
-                <img src="/image/silde3.jpg" alt="Slide 1">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
+        <div class="logo">
+            <img src="/image/logo.png" alt="">
         </div>
-    </section>
+        <div class="menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Thông tin</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Socola thanh</a></li>
+                    <li><a href="#">Bánh kẹo</a></li>
+                    <li><a href="#">Kẹo socola</a></li>
+                </ul>  
+            </li>
+            <li><a href="#">Sản phẩm
+                <ul class="sub-menu">
+                    <li><a href="#">Socola thanh</a></li>
+                    <li><a href="#">Bánh kẹo</a></li>
+                    <li><a href="#">Kẹo socola</a></li>
+                </ul>   
+            </a></li>
+            <li><a href="#">Trang</a></li>
+        </div>  
+        <div class="other">
+            <li><input type="text" placeholder="Tìm kiếm"><i class="fal fa-search"></i></li>
+            <li><i class="fal fa-heart"></i></li>
+            <li><i class="fal fa-shopping-cart"></i></li>
+            <li><i class="far fa-bars"></i></li>
+        </div>
+    </header>
+<!-- -----------------------------------------------Slider---------------------------------------------------- -->
+
+<section id="Slider">
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="/image/silde1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide fade">
+            <img src="/image/silde2.jpg" alt="Slide 1">
+        </div>
+        <div class="slide fade">
+            <img src="/image/silde3.jpg" alt="Slide 1">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+</section>
 
 <!-- -----------------------------------------------about---------------------------------------------------- -->
 <section id="about" class="about">
