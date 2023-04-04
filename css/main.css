@@ -21,7 +21,7 @@ header.sticky {
 background: #703f07;
 }
 nav.container {
-max-width: 1440px;
+max-width: 80%;
 margin: auto;
 display: flex;
 justify-content: space-between;
@@ -171,7 +171,9 @@ color: white;
 
 
 /* ------------------------------------slide------------------------------ */
-
+#slider{
+    width: 100%;
+}
 .slideshow-container {
 overflow: hidden;
 position: relative;
@@ -503,12 +505,13 @@ footer {
     position: relative;
     top: 700px;
     width: 100%;
+    margin: auto;
     background-color: #703f07;
     color: #eee;
 }
 
 .footer-top {
-    width: 1450px;
+    width: 80%;
     margin: auto;  
     margin-top: 100px;
     padding-bottom: 50px; 
@@ -564,7 +567,7 @@ li {
 }
 
 .footer-bottom-copyright {
-    width: 1450px;
+    width: 80%;
     margin: auto;
     font-size: 18px;
     padding: 15px 0px;
